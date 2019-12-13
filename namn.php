@@ -10,16 +10,9 @@
 	 	die("Connection failed:" . $conn->connect_error);
 	 }
 	 
-	 $sql = "SELECT product_desc FROM products WHERE product_id=".$id;
+	 $sql = "SELECT user_name FROM users WHERE user_id=".$id;
 	 $result = $conn->query($sql);
-     while($row=$result->fetch_assoc()){
-        if($row["product_desc"]!="NULL"){
-
-         echo $row["product_desc"];
-       
-        }
-        else{
-            echo'Product description';
-        }
-         }
+	 while($row=$result->fetch_assoc()){
+	 	echo $row["user_name"];
+	 }
 ?>

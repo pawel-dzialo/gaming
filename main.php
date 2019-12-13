@@ -14,23 +14,44 @@
     <![endif]-->
   </head>
   <body>
+        <?php include 'session_accessible.php';?>
+        <?php if(isset($_GET['deletion'])){
+            echo 'product removed succesfully';
+        }
+        if(isset($_GET['register'])){
+            echo 'user registered succesfully';
+        }?>
+  		<?php include 'link_to_login.php';?>
+        <?php include 'link_to_register.php';?>
+		<?php include 'link_to_profile.php';?>
+		<?php include 'link_to_cart.php';?>
+        <?php include 'link_to_my_orders.php';?>
+        <?php include 'link_to_admin.php';?>
+		<div id="items">
   		<?php 
 			  include 'product_counter.php';
 			  $items_on_page = 9;
 			  $page_amount = ceil($id_max/$items_on_page);
 			  $page = $_GET['page'] ?? '1';
-			  
-			  
-			  for($id=(($page-1)*$items_on_page)+1;$id<=$page*$items_on_page && $id <= $id_max;$id++){
-			  	   echo "<div id=\"item\"><img src=\"img/" .$id. ".bmp  \" height=\"100\" width=\"100\">";
+
+              $id = $items_on_page * ($page-1);
+              for($i = 0;$i<$items_on_page && $id < $id_max;$i++){
+                  include 'product_checker.php';
+                  while($exists == FALSE && $id < $id_max){
+                      $id++;
+                      include 'product_checker.php';
+                  }
+                   echo "<div id=\"item\"><img src=\"img/" .$id. ".bmp  \" height=\"100\" width=\"100\">";
 			  	   echo " <a href=\" product_test.php?id=";
 				   echo $id;
 				   echo " \" >";
+				   echo "<br>";
 				   include 'product_name.php';
 				   echo "</a>";
 				   include 'product_price.php';
 				   echo "</div>";
-			  }
+                   $id++;
+              }
 			  
 			  
 			  
@@ -52,5 +73,6 @@
 		
 		
 		?>
+		</div>
   </body>
 </html>

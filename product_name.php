@@ -13,6 +13,14 @@
 	 $sql = "SELECT product_name FROM products WHERE product_id=".$id;
 	 $result = $conn->query($sql);
 	 while($row=$result->fetch_assoc()){
-	 	echo "name:".$row["product_name"];
+        if($result !== TRUE){
+            $exists = false;
+        }
+        if($row["product_name"]!='NULL'){
+	 	 echo $row["product_name"];
+        }
+        else{
+            echo'Product name';
+        }
 	 }
 ?>
