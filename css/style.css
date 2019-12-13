@@ -7,29 +7,74 @@ body {
 
 #content{
      width:75vw;
-     background-color:blue;
      margin-left:12.5vw;   
 }
-
+#changeprod{
+    text-align: center;
+}
 #header{
-        background-color:red;
+        width:50vw;
         display:inline-block;
         
 }
 
 #pic{
-        background-color:yellow;
-        float:left;
+        display:inline-block;
+        /*float:left;*/
         width:33vw;
+}
+#under{
+    display:inline-block;
+
+  width: 100%;   
+}
+#stockchanger{
+    display:block;
+}
+#pic2{
+        display: inline-block;
+        /*float:left;*/
+        width:50vw;
 }
 
 #price{
-       background-color:cyan;
        float:right;
+}
+#price2{
+    display: inline-block;
+    width:50vw;
 }
 
 #desc{
-      background-color:purple;
       float:right;
       width:33vw;
+}
+#desc2{
+      display: inline-block;
+      width:50vw;
+}
+
+#item{
+      display:inline-block;
+	width:25vw;
+
+}
+
+#items{
+	margin-top:20vh;
+	text-align:center;
+}
+
+#item img{
+	clear:right;
+}
+
+#gradeing{
+    text-align: center;
+    width: 100vw;
+    display: block;
+}
+#reviews{
+    width:75wv;
+    text-align:left;
 }
