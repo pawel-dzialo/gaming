@@ -9,6 +9,9 @@ body {
      width:75vw;
      margin-left:12.5vw;   
 }
+#search{
+     text-align: center;
+}
 #changeprod{
     text-align: center;
 }
