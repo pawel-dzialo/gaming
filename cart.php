@@ -39,10 +39,10 @@
 			   echo 'price:';
 			   echo $amounts[$i];
 			   echo '*';
-			   include 'product_price.php';
+			   echo $prices[$i];
 			   echo '=';
-			   echo $amounts[$i]*$price;
-               echo '<a href="cart_remover.php?p_id='.$id.'">remove entry</a>';
+			   echo $amounts[$i]*$prices[$i];
+               echo '<a href="cart_remover.php?p_id='.$id.'&price='.$prices[$i].'">remove entry</a>';
 			   echo '</div>';
 			  }
 		?>

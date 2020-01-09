@@ -14,9 +14,11 @@
 	 $result = mysqli_query($conn, $sql);
 	 $products = array();
 	 $amounts = array();
+     $prices = array();
      while($row = mysqli_fetch_assoc($result)){
 	 	array_push($products, $row['product_id']);
 		array_push($amounts, $row['product_amount']);
+        array_push($prices, $row['cart_price']);
 	}
     
 

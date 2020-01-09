@@ -15,10 +15,12 @@
 	 $products = array();
 	 $amounts = array();
      $orders = array();
+     $prices = array();
      while($row = mysqli_fetch_assoc($result)){
         array_push($orders, $row['order_id']);
 	 	array_push($products, $row['product_id']);
 		array_push($amounts, $row['order_amount']);
+        array_push($prices, $row['order_price']);
 	}
     
 

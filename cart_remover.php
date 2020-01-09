@@ -11,8 +11,9 @@
 	 if($conn->connect_error){
 	 	die("Connection failed:" . $conn->connect_error);
 	 }
+     $price = $_GET['price'];
      $flag = TRUE;
-     $sql = "DELETE FROM cart WHERE user_id = ".$login_id." && product_id=".$product_id;
+     $sql = "DELETE FROM cart WHERE user_id = ".$login_id." && product_id=".$product_id." AND cart_price=".$price;
 	 $result = $conn->query($sql);
     header("location:cart.php");
 ?>

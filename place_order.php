@@ -35,7 +35,7 @@
      }
      if($out_of_stock == false){
 	 for($i=0;$i<count($products);$i++){
-	 	$sql = "INSERT INTO orders (order_id, user_id, product_id, order_amount) VALUES ('".$id_max."','".$login_id."', '".$products[$i]."', '".$amounts[$i]."')  ";
+	 	$sql = "INSERT INTO orders (order_id, user_id, product_id, order_amount, order_price) VALUES ('".$id_max."','".$login_id."', '".$products[$i]."', '".$amounts[$i]."', '".$prices[$i]."')  ";
 		$result = $conn->query($sql);
 	 	if ($result === TRUE){
   	 	}

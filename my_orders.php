@@ -35,7 +35,7 @@
 			   echo 'amount:';
 			   echo $amounts[$i];
 			   echo 'price:';
-			   include 'product_price.php';
+			   echo $prices[$i];
                echo '<a href="cancel_order.php?id='.$orders[$i].'">cancel order</a>';
 			   echo '</div>';
 			  }

@@ -13,5 +13,6 @@
         $getemail = $_POST['get_email'];
         $getadress = $_POST['get_adress'];
         include 'register_helper.php';
+        header("Location: main.php?register=1");
     }
 ?>
